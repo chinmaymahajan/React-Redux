@@ -3,7 +3,7 @@
 ### Passing props to the other components
 
 
-## git clone -b Props https://github.com/chinmaymahajan/React-Redux.git
-## cd React-Redux
-## npm install
-## npm start
+ git clone -b Props https://github.com/chinmaymahajan/React-Redux.git
+ cd React-Redux
+ npm install
+ npm start
