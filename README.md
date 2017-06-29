@@ -16,7 +16,8 @@ Store
 Store comprises of all view states in just one big javascript object, It is immutable. We can have only one store in a Redux application.
 Our component 
 Syntax:
-Markup : ```import {createStore} from "redux";
+`code()
+import {createStore} from "redux";
  
 const store = createStore(reducer,initialState);
 /*initialState argument is optional*/
@@ -26,7 +27,7 @@ Components can subscribe to the store.
 store.subscribe(() => {
 console.log("Current state ",store.getState());
 });
-         ```
+         `
 
 Reducer
 Reducer listens for the actions and based upon the actions manipulates the old state and gives back new state,
