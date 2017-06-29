@@ -65,9 +65,9 @@ payload:"some data" /* We can use value instead of payload here */
 In the example below, we are just adding the number twice and subtracting it once,
 i.e. we are dispatching ADD action twice and SUBTRACT action once. --
 
-10 + 1 = 11 --
+10 + 1 = 11 
 
-11+ 20 = 31 --
+11+ 20 = 31 
 
 31 - 10 = 21
 
