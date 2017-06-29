@@ -71,7 +71,7 @@ i.e. we are dispatching ADD action twice and SUBTRACT action once.
 
 31 - 10 = 21
 
-Here is the code https://github.com/chinmaymahajan/React-Redux/blob/master/App/index.js
+Here is the code https://github.com/chinmaymahajan/React-Redux/blob/Redux/App/index.js
 
 ### Wrapping Up
 We can have one store and multiple reducers.
