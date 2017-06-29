@@ -26,11 +26,13 @@ It gets called whenever the action is dispatched and we can get the state by usi
 Components can subscribe to the store.
 store.subscribe(() => {
 console.log("Current state ",store.getState());
-});```
+});
+```
 
 Reducer
 Reducer listens for the actions and based upon the actions manipulates the old state and gives back new state,
 if the state is immutable we can make a copy of old state and makes changes in the new state and return the new state.
+```
 const reducer = (state, action) => { 
 /*The functions takes state and action as an argument */
 /* We can use if else if else or any other mechanism to handle multiple actions */
@@ -44,17 +46,18 @@ const reducer = (state, action) => {
 	}
 	return state;
 }
+```
 
 Actions
 Actions are nothing but a user generated event, Actions are the source of information for the store.
 We can dispatch an action using the dispatch function,
 Syntax:
-
+```
 store.dispatch({
 type: "ACTION1",
 payload:"some data" /* We can use value instead of payload here */
 });
-
+```
 
 Sample code
 In the example below, we are just adding the number twice and subtracting it once,
@@ -62,38 +65,6 @@ i.e. we are dispatching ADD action twice and SUBTRACT action once.
 10 + 1 = 11
 11+ 20 = 31
 31 - 10 = 21
-import {createStore} from "redux";
-const reducer = (state, action) => {
-	switch (action.type){
-		case "ADD":
-		state += action.payload;
-			break;
-		case "SUBTRACT":
-		state -= action.payload;
-			break;
-	}
-	return state;
-}
-const store = createStore(reducer,1);
-
-store.subscribe(() => {
-	console.log("Store Updated",store.getState());
-});
-
-store.dispatch({
-	type: "ADD",
-	payload: 10
-});
-store.dispatch({
-	type: "ADD",
-	payload: 20
-});
-store.dispatch({
-	type: "SUBTRACT",
-	payload: 10
-});
-
-thunderhead > Redux Basics > Screen Shot 2017-06-29 at 10.54.17 AM.png
 
 Wrapping Up
 We can have one store and multiple reducers.
