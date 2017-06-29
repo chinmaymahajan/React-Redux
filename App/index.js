@@ -1,34 +1,34 @@
-import React from 'react';
-import {render} from 'react-dom';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import {createStore} from "redux";
 
-const headerTitle = "Header";
-const footerTitle = "Footer";
-
-const Hello = ({ type2, type1 }) => {
-  return (
-    <div>
-
-			<Header title={type1}/>
-      <h1>Welcome to React-Redux{type2} </h1>
-			<Footer title={type2}/>
-    </div>
-  )
+const reducer = (state, action) => {
+	switch (action.type){
+		case "ADD":
+		state += action.payload;
+			break;
+		case "SUBTRACT":
+		state -= action.payload;
+			break;
+	}
+	return state;
 }
 
-render(
-	<Hello type1={headerTitle} type2={footerTitle}/>,
-  document.getElementById('root')
-)
+const store = createStore(reducer,1);
 
-Hello.propTypes = {
-	type1: React.PropTypes.string,
-	type2: React.PropTypes.string,
-}
+store.subscribe(() => {
+	console.log("Store Updated",store.getState());
+});
 
-Hello.defaultProps = {
-	title1: 'unknown title'
-}
+store.dispatch({
+	type: "ADD",
+	payload: 10
+});
 
-export default Hello
+store.dispatch({
+	type: "ADD",
+	payload: 20
+});
+
+store.dispatch({
+	type: "SUBTRACT",
+	payload: 10
+});
