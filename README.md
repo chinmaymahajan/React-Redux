@@ -10,7 +10,7 @@
 
 
 ### Reudx Workflow
-
+![picture alt](https://github.com/chinmaymahajan/React-Redux/blob/Redux/Redux%20architecture.png "Redux Workflow")
 
 ### Store
 Store comprises of all view states in just one big javascript object, It is immutable. We can have only one store in a Redux application.
