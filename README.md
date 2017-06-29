@@ -66,7 +66,9 @@ In the example below, we are just adding the number twice and subtracting it onc
 i.e. we are dispatching ADD action twice and SUBTRACT action once. 
 
 10 + 1 = 11 
+
 11+ 20 = 31 
+
 31 - 10 = 21
 
 Here is the code https://github.com/chinmaymahajan/React-Redux/blob/master/App/index.js
