@@ -1,34 +1,44 @@
-import {createStore} from "redux";
+import {createStore, combineReducers} from "redux";
 
-const reducer = (state, action) => {
-	switch (action.type){
-		case "ADD":
-		state += action.payload;
-			break;
-		case "SUBTRACT":
-		state -= action.payload;
-			break;
+const initialState = {
+	payload:0
+};
+ const initialState2 = {
+ 	value: "ABC"
+ };
+
+const reducer = (state = initialState, action) => {
+	switch (action.type) {
+		case "CONTACT":
+		state = state.payload = action.payload;
+		 	break;
 	}
 	return state;
-}
+};
 
-const store = createStore(reducer,1);
+const reducer2 = (state = initialState,action) => {
+	switch(action.type) {
+		case "DETAILS" :
+		state = state.value = action.value;
+		break;
+	}
+	return state;
+};
+
+const main = combineReducers({reducer, reducer2});
+
+const store = createStore(main);
 
 store.subscribe(() => {
-	console.log("Store Updated",store.getState());
+	console.log("Store is Updated", store.getState());
 });
 
 store.dispatch({
-	type: "ADD",
-	payload: 10
+	type: "CONTACT",
+	payload: 110
 });
 
 store.dispatch({
-	type: "ADD",
-	payload: 20
-});
-
-store.dispatch({
-	type: "SUBTRACT",
-	payload: 10
+	type:"DETAILS",
+	value: "Hello World"
 });
