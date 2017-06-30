@@ -73,6 +73,8 @@ i.e. we are dispatching ADD action twice and SUBTRACT action once.
 
 Here is the code https://github.com/chinmaymahajan/React-Redux/blob/Redux/App/index.js
 
+Output: ![picture alt](React-Redux/Screen Shot 2017-06-29 at 11.23.01 PM.png "Output")
+
 ### Wrapping Up
 We can have one store and multiple reducers.
 We tell the store who is responsible for changing the state, then we dispatch and action which is handled by reducer.
