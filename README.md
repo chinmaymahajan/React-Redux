@@ -4,7 +4,7 @@ Sometime we need to have more than one reducer in our application,
 It is possible to have multiple reducer, we can achieve this using combineReducers method.
 combineReducers takes an object as an argument which contains multiple reducers.
 
-![picture alt](https://github.com/chinmaymahajan/React-Redux/blob/multiple-reducers/multiple%20reducers.png "Multiple Reducers flow")
+![picture alt](https://github.com/chinmaymahajan/React-Redux/blob/multiple-reducers/multiple%20reducers.jpg "Multiple Reducers flow")
 
 For complete source code
 
