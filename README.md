@@ -13,3 +13,5 @@ Visit other branch for
 Props - https://github.com/chinmaymahajan/React-Redux/tree/Props
 
 Redux - https://github.com/chinmaymahajan/React-Redux/tree/Redux
+
+Multiple Reducers - https://github.com/chinmaymahajan/React-Redux/tree/multiple-reducers
